@@ -43,3 +43,63 @@ console.log('Proje açıldı!')
 
 
 /* Kodlar Buradan aşağıya */
+
+const navitems = document.querySelectorAll("header nav a");
+/*navitems[0].textContent = siteContent["nav"]["nav-item-1"]
+navitems[1].textContent = siteContent["nav"]["nav-item-2"]
+navitems[2].textContent = siteContent["nav"]["nav-item-3"]
+navitems[3].textContent = siteContent["nav"]["nav-item-4"]
+navitems[4].textContent = siteContent["nav"]["nav-item-5"]
+
+navitems[0].setAttribute("class", "italic") 
+navitems[1].setAttribute("class", "italic")
+navitems[2].setAttribute("class", "italic")
+navitems[3].setAttribute("class", "italic")
+navitems[4].setAttribute("class", "italic")
+*/
+
+navitems.forEach((item,index) => {
+  let i = index+1
+  item.textContent = siteContent["nav"]["nav-item-"+i]
+  item.setAttribute("class", "italic")
+})
+
+const logoImg = document.querySelector("header img");
+logoImg.setAttribute("src", siteContent.images["logo-img"])
+
+document.getElementById("cta-img").src = siteContent.images["cta-img"]
+document.getElementById("middle-img").src = siteContent.images["accent-img"]
+
+const ctaText = document.querySelector(".cta-text");
+ctaText.querySelector("h1").textContent = siteContent.cta.h1
+ctaText.querySelector("button").textContent = siteContent.cta.button
+
+const topContent = document.querySelectorAll(".top-content .text-content");
+topContent[0].querySelector("h4").textContent = siteContent["ana-içerik"]["özellikler-h4"];
+topContent[0].querySelector("p").textContent = siteContent["ana-içerik"]["özellikler-içerik"];
+topContent[1].querySelector("h4").textContent = siteContent["ana-içerik"]["hakkımızda-h4"];
+topContent[1].querySelector("p").textContent = siteContent["ana-içerik"]["hakkımızda-içerik"];
+
+const bottomContent = document.querySelectorAll(".bottom-content h4");
+bottomContent[0].textContent = siteContent["ana-içerik"]["servisler-h4"]
+bottomContent[1].textContent = siteContent["ana-içerik"]["ürünler-h4"]
+bottomContent[2].textContent = siteContent["ana-içerik"]["vizyon-h4"]
+
+const bottomContent_p = document.querySelectorAll(".bottom-content p");
+bottomContent_p[0].textContent=siteContent["ana-içerik"]["servisler-içeriği"]
+bottomContent_p[1].textContent=siteContent["ana-içerik"]["ürünler-içeriği"]
+bottomContent_p[2].textContent=siteContent["ana-içerik"]["vizyon-içeriği"]
+
+document.querySelector(".contact h4").textContent=siteContent.iletisim["iletişim-h4"];
+
+const contact=document.querySelectorAll(".contact p");
+contact[0].textContent=siteContent.iletisim.adres
+contact[1].textContent=siteContent.iletisim.telefon
+contact[2].textContent=siteContent.iletisim.email
+
+document.querySelector("footer a").textContent=siteContent.footer.copyright
+
+
+
+
+
