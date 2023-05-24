@@ -98,7 +98,7 @@ contact[1].textContent=siteContent.iletisim.telefon
 contact[2].textContent=siteContent.iletisim.email
 
 document.querySelector("footer a").textContent=siteContent.footer.copyright
-
+document.querySelector("footer a").classList.add("bold")
 
 
 

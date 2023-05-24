@@ -1,5 +1,8 @@
 
 import '@testing-library/jest-dom/extend-expect'
+const { server } = require('./mocks/server')
+const { screen } = require('@testing-library/dom')
+require('@testing-library/jest-dom/extend-expect')
 
 beforeAll(() => {
   server.listen()
